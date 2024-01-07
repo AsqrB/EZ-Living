@@ -1,0 +1,312 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Barlow:wght@400;500;600;700");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900");
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  src: url('Barlow/Barlow-SemiBold.woff') format('woff')
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Barlow/Barlow-ExtraBold.woff') format('woff')
+}
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  src: url('Barlow/Barlow-Medium.woff') format('woff')
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZs.woff) format('woff')
+}
+
+:root{
+    --first-color: #476FD6;
+    --second-color: #f7fdf7;
+    --card-text-color: #272525;
+    --card-background: #E7EDF9;
+    --body-font: "Montserrat";
+    --heading-font: "Barlow";
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  color: var(--second-color);
+  font-family: "Barlow" !important;
+  background-image: url("media/Background.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* font-family: Inter; */
+}
+a {
+  text-decoration: none !important;
+}
+/* navbar */
+
+.navbar {
+  position: fixed !important;
+  width: 100vw;
+  z-index:2;
+  padding: 30px;
+  background-image: linear-gradient(135deg, #396AF1 10%, #A665F6 90%);
+  font-family: "Barlow";
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  background-image: linear-gradient(135deg, #396AF1 10%, #A665F6 90%);
+}
+
+.navbar .max-width {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar .logo a {
+  color: var(--second-color);
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: var(--second-color);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+/* .navbar .menu li a:hover {
+  color: crimson;
+} */
+
+.navbar.sticky .menu li a:hover {
+  color: #fff;
+}
+
+/* menu btn styling */
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 947px) {
+  .menu-btn {
+    display: block;
+    z-index: 10;
+  }
+
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+
+  .max-width {
+    max-width: 930px;
+  }
+
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+}
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+}
+  
+@media (max-width: 400px) {
+  .navbar .logo a {
+    font-size: 30px;
+  }
+}
+
+  section {
+    padding: 5% 10%;
+  }
+
+  p {
+    font-family: "Inter";
+  }
+
+  .Packages {
+    background-color: #e7e9f4;
+  }
+
+  section h1 {
+    background-image: linear-gradient(135deg, #396AF1 10%, #A665F6 90%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 2.5vh;
+    font-size: 40px;
+    /* text-shadow: 0 0 4px #fff; */
+  }
+
+  .section-box {
+    padding: 5%;
+    /* border-color: #e5e0df; */
+    /* border: 2px solid #e5e0df; */
+    border-radius: 24px;
+    box-shadow:  8px 8px 16px #bababa, -8px -8px 16px #ffffff;
+    background: #eeeff5;
+  }
+
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40vh;
+    /* height:100vh; */
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(0,0,0, 0.75), rgba(0,0,0, 0.8)), url(media/cover1.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+  }
+
+  .card {
+    background-color: #e7e9f4!important;
+  }
+
+  .card-text, .card-title, section h1, .cover-content {
+    font-weight: 700;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+    font-style: normal;
+    letter-spacing: 1.25px;
+    line-height: 1.5;
+  }
+  .cover-title {
+    text-shadow: none;
+    font-size: 48px;
+    font-weight: 600;
+  }
+  .cover-content {
+    font-size: 16px;
+    max-width:70vw;
+    padding-right:20vw;
+  }
+  .cover-text {
+    color: var(--second-color);
+  }
+  .section-btn {
+    padding: 12px 20px;
+    margin: 16px 4px;
+    background-image: linear-gradient(135deg, #396AF1 10%, #A665F6 90%);
+    color: var(--second-color);
+    font-size: 16px;
+    border-radius: 16px; 
+    border:0;
+    font-weight: 600;
+    font-family: "Inter";
+  }
+  
+  .card-title i{
+    color: #e94075;
+  }
+  .card-text {
+    color : var(--card-text-color);
+    font-weight: 400;
+  }
+
+  .quote form input, .quote form textarea, .quote form select {
+    border: 0;
+    padding: 12px;
+    border-radius: 12px;
+    background: #eeeff5;
+    box-shadow: inset 5px 5px 14px #d1d2d8, inset -5px -5px 14px #ffffff;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .quote form input:focus, .quote form textarea:focus, .quote form select:focus {
+    outline: none;
+    background: #f7f7f5;
+    box-shadow: inset 5px 5px 14px #b9bac0, inset -5px -5px 14px #ffffff;
+    cursor: pointer;
+  }
+
+  img.quote-img {
+    height: 100%;
+    width:100%;
+    border-radius: 1.5em;
+    object-fit: cover;
+    object-position: center center;
+    /* border: 2px solid #000; */
+  }
