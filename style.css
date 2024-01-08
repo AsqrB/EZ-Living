@@ -172,7 +172,7 @@ section h1 {
   justify-content: center;
   min-height: min(95vh, 800px);
   align-items: center;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.8)), url(media/cover1.jpg);
+  background-image: linear-gradient(to right, rgba(15, 0, 45, 0.75), rgba(15, 0, 45, 0.8)), url(media/cover1.jpg);
   background-size: cover;
   background-position: center;
 }
